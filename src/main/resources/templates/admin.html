@@ -1,0 +1,30 @@
+<!DOCTYPE HTML >
+<html>
+<head>
+    <title>管理页面</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>-->
+    <script src="js/jquery_1.10.2.js"></script>
+</head>
+<body>
+姓名: <input  id="userName" type="text" /> <br/>
+<input id="submit" type="submit"/>
+
+<script>
+    $("#submit").click(function() {
+        var userName = $("#userName").val();
+        $.ajax({
+            type: "GET",
+            url: "/getStudents?name="+userName,
+            contentType: "application/x-www-form-urlencoded",
+            success: function (success) {
+                alert(JSON.stringify( success ));
+            },
+            error :function (error) {
+                alert(error);
+            }
+        });
+    })
+</script>
+</body>
+</html>

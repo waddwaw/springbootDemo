@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>-->
+    <script src="js/jquery_1.10.2.js"></script>
+</head>
+<body>
+用户名: <input  id="user" type="text" /><br>
+密码: <input id="pwd" type="text"/><br>
+<input id="submit" type="submit">
+<script>
+    $("#submit").click(function() {
+
+        var user = $("#user").val();
+        var pwd = $("#pwd").val();
+        $.ajax({
+            type: "POST",
+            url: "/dologin",
+            contentType: "application/x-www-form-urlencoded",
+            data: {
+                user:user,
+                pwd:pwd
+            },
+            success: function (success) {
+                alert(success);
+                if(success=="successful"){
+                    window.location = "/admin";
+                }else {
+                    alert("用户名密码错误");
+                }
+            },
+            error :function (error) {
+                alert(error);
+            }
+        });
+    })
+</script>
+</body>
+</html>
