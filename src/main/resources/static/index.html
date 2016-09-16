@@ -5,6 +5,7 @@
     <title>录入学生信息系统</title>
     <!--<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>-->
     <script src="js/jquery_1.10.2.js"></script>
+    <script src="js/baseJs.js"></script>
 </head>
 <body>
 学生姓名: <input  id="name" type="text"/> ><br>
@@ -51,7 +52,7 @@
 
         $.ajax({
             type: "POST",
-            url: "/postStudents",
+            url: getRootPath()+"/postStudents",
             contentType: "application/json",
             data: JSON.stringify({
                 name: name,

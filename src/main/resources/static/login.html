@@ -5,6 +5,7 @@
     <title>Title</title>
     <!--<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>-->
     <script src="js/jquery_1.10.2.js"></script>
+    <script src="js/baseJs.js"></script>
 </head>
 <body>
 用户名: <input  id="user" type="text" /><br>
@@ -17,7 +18,7 @@
         var pwd = $("#pwd").val();
         $.ajax({
             type: "POST",
-            url: "/dologin",
+            url: getRootPath()+"/dologin",
             contentType: "application/x-www-form-urlencoded",
             data: {
                 user:user,
@@ -26,7 +27,7 @@
             success: function (success) {
                 alert(success);
                 if(success=="successful"){
-                    window.location = "/admin";
+                    window.location = getRootPath()+"/admin";
                 }else {
                     alert("用户名密码错误");
                 }
