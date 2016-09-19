@@ -15,6 +15,7 @@ $("#submit").click(function() {
         }
     });
 })
+
 $("#callback").click(function () {
     var fromTel = $("#fromTel").val();
     var toTel = $("#toTel").val();
@@ -30,3 +31,24 @@ $("#callback").click(function () {
         }
     });
 })
+
+var callTel = new Array();
+
+$(document).ready(function(){
+
+    //初始化 本地配置信息
+
+    var cTel = $.cookie('callTel');
+
+    var json2 = JSON.parse(cTel);
+
+    if(cTel!=null){
+        for(var tel in json2){
+            callTel.push(json2[tel]);
+        }
+    }
+
+
+
+});
+

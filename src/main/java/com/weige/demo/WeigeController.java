@@ -54,10 +54,17 @@ public class WeigeController {
 
     @RequestMapping("/admin")
     public String admin(Model model){
-        StudentsEntity studentsEntity = new StudentsEntity();
-        studentsEntity.setName("登录成功");
-        model.addAttribute("cao",studentsEntity);
-        return "admin";
+        return "admin_index";
+    }
+
+    @RequestMapping("/admin_callset")
+    public String admin_callset(Model model){
+        return "admin_callset";
+    }
+
+    @RequestMapping("/admin_student")
+    public String admin_student(Model model){
+        return "admin_student";
     }
 
     @RequestMapping(value = "/dologin",method = RequestMethod.POST)

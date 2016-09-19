@@ -1,0 +1,22 @@
+body{
+    /*width: 100%;*/
+    /*height: 100%;*/
+}
+#new_call{
+    margin-top: 20px;
+    margin-left: 30px;
+}
+#call_list{
+    margin-top: 15px;
+    margin-left: 30px;
+    width:500px;
+    height: 400px;
+}
+#call_list > hr{
+    height:1px;
+    border:none;
+    border-top:1px dashed #0066CC;
+}
+#call_list > input{
+    margin-top: 20px;
+}

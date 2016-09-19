@@ -1,16 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+<head lang="en">
     <meta charset="UTF-8">
-    <title>Title</title>
-    <!--<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>-->
-    <script src="js/jquery_1.10.2.js"></script>
+    <title>后台登陆入口</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <!--<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">-->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/login.css" />
     <script src="js/baseJs.js"></script>
 </head>
 <body>
-用户名: <input  id="user" type="text" /><br>
-密码: <input id="pwd" type="text"/><br>
-<input id="submit" type="submit">
+<div id="main">
+<span>教育管理系统</span>
+<div id="u_tb" cellspacing="10">
+    <table style="margin:30px auto">
+        <tr>
+            <td>用户名</td>
+            <td><input id="user" class="form-control"/></td>
+        </tr>
+        <tr>
+            <td>密码</td>
+            <td><input id="pwd" type="password" class="form-control"/></td>
+        </tr>
+    </table>
+    <input id="submit" type="submit" class="btn btn-warning" style="width: 100px ;font-size: 20px" value="登陆"/>
+</div>
+</div>
 <script>
     $("#submit").click(function() {
 
