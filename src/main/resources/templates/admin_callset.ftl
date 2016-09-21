@@ -81,7 +81,7 @@
 
         initTel();
 
-        alert(obj + "t添加成功");
+        alert(me_tel + "添加成功");
     })
 
     $(".save_Tel").click(function() {
